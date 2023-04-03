@@ -15,12 +15,13 @@ function clickHandler (event) {
                 lastName: lastNameInput.value,
                 progName: programNameInput.value
             }
-            console.log(student);
             myStudents.push(student);
             // check if an entry with student's infor is in the array don't push it
             firstNameInput.value = "";
             lastNameInput.value = "";
             programNameInput.value = "";
+
+            addsStudenttoList(student);
         }
         else if (event.target.id === "background-button"){
             
@@ -29,3 +30,14 @@ function clickHandler (event) {
 }
 
 bodyRef.addEventListener("click", clickHandler);
+
+function addsStudenttoList (studentInfo) {
+    let newList = document.createElement("li");
+    newList.textContent = `${studentInfo["firstName"]} ${studentInfo["lastName"]}`;
+    let prog = document.querySelectorAll(".enroll ul");
+    for (let item of prog) {
+        if (item.className.includes(studentInfo["progName"])){
+            item.appendChild(newList);
+        }
+    }
+}
