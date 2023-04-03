@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>DOM manipulation example</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-<body>
-    <header>
-        <h1>Enter student's information</h1>
-        <button>Change Background Color</button>
+  <body>
+    <header class="flex-container">
+      <h1>Enter student's information</h1>
+      <button>Change Background Color</button>
     </header>
 
     <section>
-        <label>First Name:</label>
-        <input id="firstname" type="text">
-        <label>Last Name:</label>
-        <input id="lastname" type="text">
-        <label>Program Name:</label>
-        <input id="progname" type="text">
-        <button>Submit</button>
+      <div class="labels">
+        <label class="labels-item">First Name:</label>
+        <input id="firstname" type="text" />
+        <label class="labels-item">Last Name:</label>
+        <input id="lastname" type="text" />
+        <label class="labels-item">Program Name:</label>
+        <input id="progname" type="text" />
+      </div>
+      <div class="submit-button">
+        <button class="sub-button">Submit</button>
+      </div>
     </section>
 
     <section>
-        <h2>Enrolled students</h2>
-        <ul>Sudents Enrolled in CIT</ul>
-        <ul>Sudents Enrolled in CST</ul>
+      <h2>Enrolled students</h2>
+      <div class="enroll">
+        <ul>
+          Sudents Enrolled in CIT
+        </ul>
+        <ul>
+          Sudents Enrolled in CST
+        </ul>
+      </div>
     </section>
-
-</body>
-
+  </body>
 </html>

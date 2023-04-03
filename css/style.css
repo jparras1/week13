@@ -1,3 +1,45 @@
 body {
     background-color: tan;
 }
+
+.labels {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.labels-item {
+    text-align: center;
+}
+
+.submit-button {
+    display: flex;
+    justify-content: center;
+}
+
+/* .sub-button {
+    display: block;
+    margin: auto;
+} */
+
+@media screen and (min-width: 500px) {
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .labels {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    /* .labels-item {
+        text-align: center;
+        flex: 1 1 100px;
+    } */
+
+    .enroll {
+        display: flex;
+        justify-content: space-around;
+    }
+}
