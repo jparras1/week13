@@ -15,13 +15,26 @@ function clickHandler (event) {
                 lastName: lastNameInput.value,
                 progName: programNameInput.value
             }
-            myStudents.push(student);
+            
             // check if an entry with student's infor is in the array don't push it
+            let studentExists = false;
+            for (let item of myStudents) {
+                if (
+                    item.firstName === student.firstName &&
+                    item.lastName === student.lastName &&
+                    item.progName === student.progName) {
+                        alert("student exists");
+                        studentExists = true;
+                    }
+            }
+            if (studentExists === false) {
+                myStudents.push(student);
+                addsStudenttoList(student);
+            }
             firstNameInput.value = "";
             lastNameInput.value = "";
             programNameInput.value = "";
 
-            addsStudenttoList(student);
         }
         else if (event.target.id === "background-button"){
             
